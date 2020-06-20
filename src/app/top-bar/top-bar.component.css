@@ -10,6 +10,12 @@ a:hover {
   background-color: var(--store-blue);
 }
 
+/* Home Link */
+
+.home-link {
+  font-size: 1.2rem;
+}
+
 /* Prominent Link */
 
 .prominent-link {

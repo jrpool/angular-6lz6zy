@@ -48,7 +48,7 @@ p {
 /* Hyperlink */
 
 a {
-  color: #1976d2;
+  color: var(--store-blue);
 }
 
 a:hover {
@@ -59,28 +59,24 @@ a:hover {
 /* Input */
 
 input {
-  font-size: 14px;
-  border-radius: 2px;
+  border-radius: 0.125rem;
   padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid #BDBDBD;
+  margin-bottom: 1rem;
+  border: 1px solid #888;
 }
 
 label {
-  font-size: 12px;
   font-weight: bold;
-  margin-bottom: 4px;
+  margin-bottom: 0.25rem;
   display: block;
-  text-transform: uppercase;
 }
 
 /* Button */
 button {
   display: inline-flex;
   align-items: center;
-  padding: 8px 16px;
+  padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  font-size: 14px;
   cursor: pointer;
   background-color: var(--store-blue);
   color: white;

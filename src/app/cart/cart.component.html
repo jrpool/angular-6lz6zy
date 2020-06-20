@@ -1,3 +1,40 @@
-<p>
-cart works!
-</p>
+<h1>Cart</h1>
+<p><a routerLink="/shipping">Shipping prices</a></p>
+<div class="cart-item" *ngFor="let item of items">
+  <span>{{ item.name }}</span><span>{{ item.price | currency }}</span>
+</div>
+<form
+  *ngIf="items.length"
+  [formGroup]="checkoutForm"
+  (ngSubmit)="onSubmit(checkoutForm.value)"
+>
+  <div>
+    <label for="name">
+      Name (required)
+    </label>
+    <input
+      required
+      id="name"
+      type="text"
+      formControlName="name"
+      autocomplete="name"
+      maxlength="60"
+      size="50"
+    >
+  </div>
+  <div>
+    <label for="email">
+      Email address (required)
+    </label>
+    <input
+      required
+      id="email"
+      type="email"
+      formControlName="email"
+      autocomplete="email"
+      maxlength="60"
+      size="50"
+    >
+  </div>
+  <button *ngIf="checkoutForm.status === 'VALID'">Purchase</button>
+</form>

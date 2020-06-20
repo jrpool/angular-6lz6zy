@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd }from '@angular/router';
 
 @Component({
   selector: 'app-top-bar',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent implements OnInit {
-  constructor() { }
-  ngOnInit() { }
+  constructor(
+    private router: Router
+  ) {
+    router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.currentURL = event.url;
+      }
+    })
+  }
+  ngOnInit() {
+    console.log('The URL is ' + this.router.url);
+  }
+  currentURL: string = this.router.url;
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
