@@ -1,0 +1,31 @@
+*:focus {
+  outline-color: white;
+}
+a {
+  font-weight: bold;
+  color: white;
+}
+a:hover {
+  color: black;
+  background-color: var(--store-blue);
+}
+
+/* Prominent Link */
+
+.prominent-link {
+  font-size: 1.6rem;
+  padding: 0.5rem;
+  background-color: white;
+  color: var(--store-blue);
+}
+
+.prominent-link i.material-icons {
+  color: var(--store-blue);
+  padding-right: 4px;
+}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
